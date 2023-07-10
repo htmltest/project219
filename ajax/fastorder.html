@@ -1,0 +1,43 @@
+<div class="fast-window">
+    <h3>Заказ в один клик</h3>
+        <div class="basket">
+        <div class="basket-row">
+            <div class="basket-photo"><a href="#"><img src="upload/3bd94192a9c8789d679558b25c1b6186.png" alt="Behringer" /></a></div>
+            <div class="basket-text">
+                <div class="basket-title"><a href="#">Behringer</a></div>
+            </div>
+            <div class="basket-row-price">
+                76 547 &#8381;
+                <div class="basket-row-count-text">1 шт.</div>
+            </div>
+        </div>
+    </div>
+    <form action="ajax/fastorder.html" method="post" class="window-form">
+        <input type="hidden" name="item" value="1473">
+        <input type="text" name="tname" />
+        <div class="form-row fast-window-count">
+            <div class="form-label">количество</div>
+            <div class="form-field">
+                <div class="form-input"><input type="number" name="count" value="1" step="1" min="1" /></div>
+            </div>
+        </div>
+        <div class="form-row fast-window-phone">
+            <div class="form-label">Телефон</div>
+            <div class="form-field">
+                <div class="form-input"><input type="text" name="phone" value="" class="required maskPhone" /></div>
+             </div>
+        </div>
+        <div class="form-row fast-window-email">
+            <div class="form-label">email <span>/ опционально</span></div>
+            <div class="form-field">
+                <div class="form-input"><input type="text" name="email" value="" class="email" /></div>
+            </div>
+        </div>
+        <div class="form-row fast-window-private">
+            <div class="form-checkbox">
+                <label><input type="checkbox" name="private" checked="checked" class="required" /><span></span><strong>Я принимаю условия <a href="#" class="target" target="_blank">политики конфеденциальности</a></strong></label>
+            </div>
+        </div>
+        <div class="form-submit"><input type="submit" value="Оставить заявку" class="btn-submit" /></div>
+    </form>
+</div>

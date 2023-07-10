@@ -1,0 +1,13 @@
+.side-menu > ul > li > ul {padding:0 0 13px 0}
+.side-menu > ul > li > ul > li > ul {display:none}
+.side-menu > ul > li > ul > li.active > ul {display:block}
+.side-menu > ul > li > ul > li {padding:0}
+.side-menu > ul > li > ul > li > a {display:block; position:relative; padding:6px 30px 6px 40px;  font-weight:bold; color:#222020}
+.side-menu > ul > li > ul > li > ul {padding-left:50px}
+.side-menu > ul > li > ul > li.active.closed a {color:#000000}
+
+.side-menu > ul > li > ul > li > span {display:block; position:absolute; right:0; top:0; width:38px; height:35px; background:url(../images/blank.gif); cursor:pointer}
+.side-menu > ul > li > ul > li > span:before {content:""; display:block; position:absolute; right:18px; top:50%; margin-top:-4px; width:8px; height:8px; background: url(../images/side-menu.png)}
+.side-menu > ul > li > ul > li.active > span:before,
+.side-menu > ul > li > ul > li.open > span:before {background-position:left -8px}
+.side-menu > ul > li > ul > li.active.closed > span:before {background-position:left top}
