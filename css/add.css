@@ -2,17 +2,8 @@
 .basket-row-price-per-item{display:none;}
 input[name=name], input[name=tname] {display:none;}
 
-.prefs{padding: 0px 0 0px 0;}
-.prefs.service{padding: 50px 0 0px 0;}
-
 .portfolio-pic-wrap {padding: 0 0 20px 0}
 .portfolio-back {padding: 20px 0}
-
-@media screen and (max-width:767px) {
-	.menu-add-sections .main-sections-item .main-sections-item-inner ul {line-height: 32px; font-size: 18px;}
-	.menu-add-sections .main-sections-item .main-sections-item-inner ul li ul {padding: 0 0 10px 25px}
-	.menu-add-sections .main-sections-item .main-sections-item-inner ul li ul li { font-size: 16px; line-height: 32px;}
-}
 
 form{margin: 0; padding: 0}
 .checkout-form{padding: 11px 30px 38px 0;}
@@ -33,7 +24,6 @@ h1+.search-ctrl {margin:30px 0 13px 0}
     .search-results-form+.pager {display:none}
 	.menu-add-main li.mobile-with-submenu.open ul{padding: 0 0 20px 0;}
 	.menu-add-main li.mobile-with-submenu.open ul li a{line-height: 40px}
-	.menu-add-sections > ul > li > a{padding: 20px 80px 20px 35px}
 }
 
 .search-ctrl .pager {float:right; margin:0}
@@ -96,19 +86,4 @@ h1+.search-ctrl {margin:30px 0 13px 0}
 
 .hiddenLogo {display:none;}
 
-.top-section-descr{
-    margin: 0 0 25px 0;
-}
-
 .jspDrag{background: #0e6398}
-
-.catalogue-item-name{text-transform: inherit; text-align: left; font-weight: 400}
-.catalogue-item-text-inner{vertical-align: top}
-@media screen and (min-width:1199px) {
-	.catalogue-item-inner .articul {font-size: 14px; position: absolute; top: 270px; left: 10px; color: #aaa; font-weight: 400}
-	.main-sections-item-inner{height: 405px;}
-	.catalogue-item-ctrl{border: 0; margin-left: 10px; margin-right: 10px;}
-	.catalogue-item-price{margin-top: 5px; font-size: 22px;}
-	.catalogue-item-cart{margin-top: 5px}
-	.catalogue-item-name{padding-left: 10px; padding-right: 10px}
-}

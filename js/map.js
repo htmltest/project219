@@ -1,7 +1,7 @@
 ymaps.ready(init);
 
                         var myMap;
-                        var coords = [55.785205, 37.704134];
+                        var coords = [55.786505, 37.704143];
 
                         function init() {
                             myMap = new ymaps.Map('map', {
