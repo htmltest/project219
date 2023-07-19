@@ -1,7 +1,11 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
-    <symbol viewBox="0 0 12 8" id="nav-catalogue">
+    <symbol viewBox="0 0 12 8" id="nav-sub">
         <path d="M11.3077 2.2L5.65383 7.85382L-2.47137e-07 2.2L1.05383 1.14617L5.65383 5.74617L10.2538 1.14617L11.3077 2.2Z" />
+    </symbol>
+
+    <symbol viewBox="0 0 18 24" id="nav-catalogue">
+        <path d="M0 17.6346V16.1346H17.5V17.6346H0ZM0 12.75V11.25H17.5V12.75H0ZM0 7.86539V6.36542H17.5V7.86539H0Z" />
     </symbol>
 
     <symbol viewBox="0 0 16 17" id="catalogue-header-section">

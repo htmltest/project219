@@ -357,18 +357,22 @@ header {padding:29px 0 15px 0; background:#fff}
 @media screen and (min-width:1200px) {
     .nav {height:48px; border-top:1px solid #F6F6F6; border-bottom:1px solid #F6F6F6; box-sizing:border-box}
     .nav > .container > ul {position:relative; margin:0 -20px; padding:0; text-transform:uppercase; font-weight:bold; display:flex}
-    .nav > .container > ul > li {margin:0; padding:0; position:static}
+    .nav > .container > ul > li {margin:0; padding:0; position:relative}
+    .nav > .container > ul > li.nav-catalogue {position:static}
     .nav > .container > ul > li::before {display:none}
     .nav > .container > ul > li > a {display:block; color:#000000; text-decoration:none; padding:0 20px; line-height:46px; transition:background 0.3s ease, color 0.3s ease}
     .nav > .container > ul > li.active > a,
     .nav > .container > ul > li:hover > a {background:#0E6399; color:#FFFFFF}
     .nav > .container > ul > li > a > svg {display:inline-block; vertical-align:middle; margin:-4px 0 0 10px; width:12px; height:8px; fill:#000000; transition:fill 0.3s ease}
+    .nav > .container > ul > li.nav-catalogue > a > svg {margin:-4px 10px 0 0; width:18px; height:24px}
     .nav > .container > ul > li.active > a > svg,
     .nav > .container > ul > li:hover > a > svg {fill:#FFFFFF}
-    .nav > .container > ul > li > ul {display:none; position:absolute; left:0; top:100%; right:0; z-index:991; margin:0; padding:40px 40px 0 40px; font-size:15px; line-height:24px; text-transform:uppercase; font-weight:600; letter-spacing:0.05em; background:#FFFFFF; column-count:4; column-gap:40px}
+    .nav > .container > ul > li > ul {display:none; position:absolute; left:0; top:100%; white-space:nowrap; z-index:991; margin:0; padding:40px 40px 0 40px; font-size:15px; line-height:24px; text-transform:uppercase; font-weight:600; letter-spacing:0.05em; background:#FFFFFF}
+    .nav > .container > ul > li.nav-catalogue > ul {right:0; white-space:normal; column-count:4; column-gap:40px}
     .nav > .container > ul > li:hover > ul {display:block}
     .nav > .container > ul > li.with-submenu:hover::after {content:""; display:block; position:absolute; left:-99999px; right:-99999px; top:100%; bottom:-99999px; background:rgba(0, 0, 0, 0.2); z-index:989; pointer-events:none}
-    .nav > .container > ul > li > ul > li {margin:0; padding:0 0 40px 0; min-height:88px; box-sizing:border-box; -webkit-column-break-inside:avoid; page-break-inside:avoid; break-inside:avoid; break-inside:avoid-column}
+    .nav > .container > ul > li > ul > li {margin:0; padding:0 0 20px 0; box-sizing:border-box; -webkit-column-break-inside:avoid; page-break-inside:avoid; break-inside:avoid; break-inside:avoid-column}
+    .nav > .container > ul > li.nav-catalogue > ul > li {padding:0 0 40px 0}
     .nav > .container > ul > li > ul > li::before {display:none}
     .nav > .container > ul > li > ul > li > a {color:#000000; text-decoration:none; padding:5px 0}
     .nav > .container > ul > li > ul > li.active > a,
@@ -415,12 +419,13 @@ header {padding:29px 0 15px 0; background:#fff}
     .nav > .container > ul > li > ul > li > ul > li > span {position:absolute; right:20px; top:20px; font-size:16px; font-weight:normal; color:#898989}
 }
 
-.breadcrumbs {font-size:11px; text-transform:uppercase; padding:23px 0 0 0}
-.breadcrumbs span {display:inline-block; vertical-align:middle; width:9px; height:7px; background:url(../images/breadcrumbs.png); margin:-2px 9px 0 9px}
+.breadcrumbs {font-size:12px; line-height:20px; margin:30px 0 40px 0; color:#000000}
+.breadcrumbs span {display:inline-block; vertical-align:middle; width:9px; height:7px; background:url(../images/breadcrumbs.png); margin:-2px 10px 0 10px}
+.breadcrumbs a {color:rgba(0, 0, 0, 0.7)}
 .breadcrumbs+h1 {margin-top:40px}
 
 @media screen and (max-width:767px) {
-    .breadcrumbs {padding:20px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px}
+    .breadcrumbs {margin:20px 0 40px 0; font-size:0; line-height:0; letter-spacing:-1px}
     .breadcrumbs span {display:none}
     .breadcrumbs a {display:none}
     .breadcrumbs a:last-of-type {display:inline-block; vertical-align:top; font-size:14px; line-height:24px; letter-spacing:0; font-weight:normal; color:#6A7277; padding:6px 16px 6px 38px; position:relative; text-decoration:none; background:#F7F7F7; position:relative}
@@ -881,7 +886,7 @@ input:checked+.bx_filter_param_label.dib .bx_filter_btn_color_icon:before {borde
 
 .product-info {margin:34px 0 0 0; padding:0; font-size:15px}
 .product-info:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
-.product-info dt {float:left; clear:left; width:80px; margin:6px 0 0 0; padding:0; color:#6A7277}
+.product-info dt {float:left; clear:left; width:80px; margin:6px 0 0 0; padding:0; color:#6A7277; font-weight:300}
 .product-info dd {margin:0 0 0 80px; padding:6px 0 0 0; color:#000000}
 
 @media screen and (max-width:1199px) {
@@ -1268,7 +1273,7 @@ input:checked+.bx_filter_param_label.dib .bx_filter_btn_color_icon:before {borde
 .checkout:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 
 @media screen and (max-width:767px) {
-    .checkout {position:relative; margin:0 -30px}
+    .checkout {position:relative}
 }
 
 .checkout form {margin:0; padding:0; background:none}
@@ -1352,8 +1357,8 @@ input:checked+.bx_filter_param_label.dib .bx_filter_btn_color_icon:before {borde
 .checkout-form-form {margin:0; padding:0; background:none}
 .checkout-form .form-row {margin:12px 0}
 .checkout-form-row:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
-.checkout-form-row .form-row:nth-child(1) {float:left; width:270px}
-.checkout-form-row .form-row:nth-child(2) {float:right; width:210px}
+.checkout-form-row .form-row:nth-child(1) {float:left; width:calc(50% - 12px)}
+.checkout-form-row .form-row:nth-child(2) {float:right; width:calc(50% - 12px)}
 .checkout-form-row-2 .form-row:nth-child(1) {float:left; width:140px}
 .checkout-form-row-2 .form-row:nth-child(2) {float:left; width:163px; margin-left:30px}
 .checkout-form-row-2 .form-row:nth-child(3) {float:left; width:163px; position:relative; margin-left:14px}
