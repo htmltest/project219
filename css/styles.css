@@ -419,7 +419,7 @@ header {padding:29px 0 15px 0; background:#fff}
     .nav > .container > ul > li > ul > li > ul > li > span {position:absolute; right:20px; top:20px; font-size:16px; font-weight:normal; color:#898989}
 }
 
-.breadcrumbs {font-size:12px; line-height:20px; margin:30px 0 40px 0; color:#000000}
+.breadcrumbs {font-weight:300; font-size:12px; line-height:20px; margin:30px 0 40px 0; color:#000000}
 .breadcrumbs span {display:inline-block; vertical-align:middle; width:9px; height:7px; background:url(../images/breadcrumbs.png); margin:-2px 10px 0 10px}
 .breadcrumbs a {color:rgba(0, 0, 0, 0.7)}
 .breadcrumbs+h1 {margin-top:40px}
@@ -1304,7 +1304,7 @@ input:checked+.bx_filter_param_label.dib .bx_filter_btn_color_icon:before {borde
 .basket-text {display:table-cell; vertical-align:middle; padding:23px 30px 26px 0; line-height:20px}
 .basket-title a {color:#000; text-decoration:none}
 .basket-title a:hover {color:#0e6399}
-.basket-art {font-size:12px}
+.basket-art {font-size:12px; font-weight:300; color:#898989}
 .basket-row-count {display:table-cell; vertical-align:middle; width:70px; padding:10px 0}
 .basket-row-price {display:table-cell; vertical-align:middle; width:90px; text-align:right; font-weight:bold; padding:10px 0; color:#000; white-space:nowrap}
 .basket-row-price em {font-style:normal; font-weight:300; font-size:11px; line-height:20px; margin:-5px 0 -15px 0; display:block; color:#81808b; text-decoration:line-through}
