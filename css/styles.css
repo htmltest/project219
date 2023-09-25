@@ -230,9 +230,9 @@ header {padding:29px 0 15px 0; background:#fff}
 .logo {float:left; line-height:0}
 
 @media screen and (max-width:1199px) {
-    .logo {margin:16px 0 0 0; width:122px; height:40px; background:url(../images/logo-mobile.png)}
+    .logo {margin:16px 0 0 0; width:122px; height:40px; }
     .logo a {display:block; width:122px; height:40px}
-    .logo img {display:none}
+    .logo img {width:122px; height:40px}
 }
 
 .header-title {float:left; padding:12px 0 0 48px; text-transform:uppercase; letter-spacing:1px; color:#000; font-weight:300; line-height:16px; font-size:10px}
