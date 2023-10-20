@@ -29,6 +29,9 @@
         <script type="text/javascript" src="js/slick/slick.min.js"></script>
         <script type="text/javascript" src="js/jscrollpane/jquery.mousewheel.js"></script>
         <script type="text/javascript" src="js/jscrollpane/jquery.jscrollpane.min.js"></script>
+        <script>
+            var pathTemplate = './';
+        </script>
         <script type="text/javascript" src="js/tools.js"></script>
         <script type="text/javascript" src="js/add.js"></script>
         <script type="text/javascript" src="js/new.js"></script>
@@ -51,16 +54,19 @@
 
                         <div class="header-title">проектно-инсталляционная компания.<br /> Поставка и монтаж аудио, видео, <br /> светового оборудования<br /></div>
 
-                        <div class="header-text">
-                            <div class="header-phone"><a href="tel:+7 985 129-63-18">+7 985 129-63-18</a></div>
-                            <div class="header-schedule">Пн–Вс, 10:00 &mdash; 19:00</div>
-                        </div>
-
                         <a href="#" class="mobile-menu-link"><svg><use xlink:href="images/sprite.svg#mobile-menu-link"></use></svg></a>
 
                         <div class="header-cart" id="topCartCont"><a href="#" class="header-cart-value"><span>0</span></a></div>
 
                         <a href="#" class="header-compare" style="display:none;"></a>
+
+                        <div class="header-contacts">
+                            <div class="header-contacts-header">
+                                <div class="header-contacts-callback"><a href="windows/callback.html" class="window-link"><svg><use xlink:href="images/sprite.svg#header-contacts-phone"></use></svg><span>Обратный звонок</span></a></div>
+                                <div class="header-contacts-schedule">Пн–Вс, 10:00 — 19:00</div>
+                            </div>
+                            <a href="tel:+7 985 129-63-18" class="header-contacts-phone"><svg><use xlink:href="images/sprite.svg#header-contacts-phone"></use></svg>+7 985 129-63-18</a>
+                        </div>
 
                         <div class="header-search">
                             <a href="#" class="header-search-link"></a>
@@ -83,15 +89,44 @@
                                     <li class="active">
                                         <a href="#">Звуковое оборудование</a>
                                         <ul>
-                                            <li><a href="#">Акустические системы</a><span>38</span></li>
-                                            <li><a href="#">Линейные массивы</a><span>26</span></li>
-                                            <li><a href="#">Аудио матрицы</a><span>26</span></li>
-                                            <li><a href="#">Источники сигнала</a><span>26</span></li>
-                                            <li class="active"><a href="#">Микшерные пульты</a><span>26</span></li>
-                                            <li><a href="#">Настенные панели управления</a><span>26</span></li>
-                                            <li><a href="#">Трансляционное оборудование</a><span>225</span></li>
-                                            <li><a href="#">Микрофоны и радиосистемы</a><span>26</span></li>
-                                            <li><a href="#">Акустические контроллеры</a><span>26</span></li>
+                                            <li>
+                                                <a href="#">Акустические системы</a><span>38</span>
+                                                <ul>
+                                                    <li><a href="#">Активная акустика</a><span>43</span></li>
+                                                    <li><a href="#">Активные сабвуферы</a><span>43</span></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Аудио матрицы</a><span>26</span>
+                                                <ul>
+                                                    <li><a href="#">Аудио матрицы Dante</a><span>2</span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="active">
+                                                <a href="#">Микшерные пульты</a><span>26</span>
+                                                <ul>
+                                                    <li class="active"><a href="#">Аналоговые микшеры</a><span>2</span></li>
+                                                    <li><a href="#">Цифровые микшеры</a><span>2</span></li>
+                                                    <li><a href="#">Стейдж-Боксы</a><span>2</span></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Трансляционное оборудование</a><span>225</span>
+                                                <ul>
+                                                    <li><a href="#">Аттенюаторы</a><span>2</span></li>
+                                                    <li><a href="#">Корпусные громкоговорители</a><span>2</span></li>
+                                                    <li><a href="#">Настольные Микшеры- Усилители</a><span>2</span></li>
+                                                    <li><a href="#">Настольные Микшеры- Усилители 6 зон</a><span>2</span></li>
+                                                    <li><a href="#">Потолочные Громкоговорители</a><span>2</span></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Микрофоны и радиосистемы</a><span>26</span>
+                                                <ul>
+                                                    <li><a href="#">Головные радиомикрофоны</a><span>2</span></li>
+                                                    <li><a href="#">Ручные радиомикрофоны</a><span>2</span></li>
+                                                </ul>
+                                            </li>
                                             <li><a href="#">Усилители мощности</a><span>26</span></li>
                                         </ul>
                                     </li>
@@ -112,23 +147,6 @@
                                             <li><a href="#">Приборы эффектов</a><span>26</span></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Караоке-системы</a></li>
-                                    <li>
-                                        <a href="#">Кабели и разъемы</a>
-                                        <ul>
-                                            <li><a href="#">Кабели</a><span>38</span></li>
-                                            <li><a href="#">Разъемы</a><span>26</span></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Механооборудование сцены</a>
-                                        <ul>
-                                            <li><a href="#">Механизм занавеса</a><span>38</span></li>
-                                            <li><a href="#">Софиты</a><span>26</span></li>
-                                            <li><a href="#">Штанкеты</a><span>26</span></li>
-                                            <li><a href="#">Лебедки</a><span>26</span></li>
-                                        </ul>
-                                    </li>
                                     <li>
                                         <a href="#">Одежда сцены</a>
                                         <ul>
@@ -143,6 +161,47 @@
                                             <li><a href="#">Караоке</a><span>38</span></li>
                                             <li><a href="#">Рестораны</a><span>26</span></li>
                                             <li><a href="#">Клубы</a><span>26</span></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Механооборудование сцены</a>
+                                        <ul>
+                                            <li><a href="#">Механизм занавеса</a><span>38</span></li>
+                                            <li><a href="#">Софиты</a><span>26</span></li>
+                                            <li><a href="#">Штанкеты</a><span>26</span></li>
+                                            <li><a href="#">Лебедки</a><span>26</span></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Караоке-системы</a></li>
+                                    <li>
+                                        <a href="#">Кабели и разъемы</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Кабели</a><span>38</span>
+                                                <ul>
+                                                    <li><a href="#">DMX кабели</a><span>43</span></li>
+                                                    <li><a href="#">Акустические кабели</a><span>43</span></li>
+                                                    <li><a href="#">Микрофонные кабели</a><span>43</span></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Разъемы</a><span>26</span>
+                                                <ul>
+                                                    <li><a href="#">Кабельные разъемы XLR</a><span>43</span></li>
+                                                    <li><a href="#">Кабельные разъемы Jack</a><span>43</span></li>
+                                                    <li><a href="#">Кабельные разъемы RCA</a><span>43</span></li>
+                                                    <li><a href="#">Кабельные разъемы RJ45</a><span>43</span></li>
+                                                    <li><a href="#">Кабельные разъемы Speakon</a><span>43</span></li>
+                                                    <li><a href="#">Кабельные разъемы Powerkon</a><span>43</span></li>
+                                                    <li><a href="#">Панельные разъемы BNC</a><span>43</span></li>
+                                                    <li><a href="#">Панельные разъемы HDMI</a><span>43</span></li>
+                                                    <li><a href="#">Панельные разъемы Powerkon</a><span>43</span></li>
+                                                    <li><a href="#">Панельные разъемы RJ45</a><span>43</span></li>
+                                                    <li><a href="#">Панельные разъемы Speakon</a><span>43</span></li>
+                                                    <li><a href="#">Панельные разъемы USB</a><span>43</span></li>
+                                                    <li><a href="#">Панельные разъемы XLR тип D</a><span>43</span></li>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </li>
                                 </ul>

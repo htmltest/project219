@@ -10,8 +10,48 @@ $(document).ready(function() {
         'Не соответствует формату'
     );
 
+    $('body').on('focus', '.form-input-new input, .form-input-new textarea', function() {
+        $(this).parent().addClass('focus');
+    });
+
+    $('body').on('blur', '.form-input-new input, .form-input-new textarea', function() {
+        $(this).parent().removeClass('focus');
+        if ($(this).val() != '') {
+            $(this).parent().addClass('full');
+        } else {
+            $(this).parent().removeClass('full');
+        }
+    });
+
+    $('body').on('input', '.form-input-new textarea', function() {
+        this.style.height = (this.scrollHeight) + 'px';
+    });
+
     $('form').each(function() {
         initForm($(this));
+    });
+
+    $('body').on('click', '.window-link', function(e) {
+        var curLink = $(this);
+        windowOpen(curLink.attr('href'));
+        e.preventDefault();
+    });
+
+    $('body').on('keyup', function(e) {
+        if (e.keyCode == 27) {
+            windowClose();
+        }
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).hasClass('window')) {
+            windowClose();
+        }
+    });
+
+    $('body').on('click', '.window-close, .window-close-btn', function(e) {
+        windowClose();
+        e.preventDefault();
     });
 
     $('.nav > .container > ul > li').each(function() {
@@ -290,27 +330,15 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('.slider').each(function() {
-        var curSlider = $(this);
-        var curHTML = '';
-        curSlider.find('.slider-item').each(function() {
-            curHTML += '<a href="#"><span></span></a>';
-        });
-        $('.slider-ctrl').html(curHTML);
-        $('.slider-ctrl a:first').addClass('active');
-    });
-
-    $('.slider-content').slick({
+    $('.slider').slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-prev"></button>',
-        nextArrow: '<button type="button" class="slick-next"></button>',
-        centerMode: true,
-        variableWidth: true,
+        prevArrow: '<button type="button" class="slick-prev"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#slider-prev"></use></svg></button>',
+        nextArrow: '<button type="button" class="slick-next"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#slider-next"></use></svg></button>',
         autoplay: true,
         autoplaySpeed: sliderPeriod,
-        dots: false,
+        dots: true,
         pauseOnFocus: false,
         pauseOnHover: false,
         pauseOnDotsHover: false,
@@ -319,25 +347,10 @@ $(document).ready(function() {
             {
                 breakpoint: 1199,
                 settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: false,
-                    variableWidth: false
+                    arrows: false
                 }
             }
         ]
-    }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-        $('.slider-ctrl a span').stop(true, true).css({'width': 0});
-        $('.slider-ctrl a.active').removeClass('active');
-        $('.slider-ctrl a').eq(nextSlide).addClass('active');
-        $('.slider-ctrl a.active span').animate({'width': '100%'}, sliderPeriod, 'linear');
-    });
-    $('.slider-ctrl a.active span').animate({'width': '100%'}, sliderPeriod, 'linear');
-
-    $('body').on('click', '.slider-ctrl a', function(e) {
-        var curIndex = $('.slider-ctrl a').index($(this));
-        $('.slider-content').slick('slickGoTo', curIndex);
-        e.preventDefault();
     });
 
     $('.brands-list-inner').slick({
@@ -452,18 +465,6 @@ $(document).ready(function() {
         $('meta[name="viewport"]').attr('content', 'width=device-width');
         $('.wrapper').css('margin-top', 0);
         $(window).scrollTop($('html').data('scrollTop'));
-        e.preventDefault();
-    });
-
-    $('.catalogue-header h1').click(function(e) {
-        if ($('.side-menu').length > 0) {
-            $('html').toggleClass('side-menu-open');
-            $(window).scrollTop(0);
-        }
-    });
-
-    $('.side-menu-mobile-link').click(function(e) {
-        $('html').removeClass('side-menu-open');
         e.preventDefault();
     });
 
@@ -644,6 +645,20 @@ $(window).on('load resize scroll', function() {
 });
 
 function initForm(curForm) {
+    curForm.find('.form-input-new input, .form-input-new textarea').each(function() {
+        if ($(this).val() != '') {
+            $(this).parent().addClass('full');
+        }
+    });
+
+    curForm.find('.form-input-new input:focus, .form-input-new textarea:focus').each(function() {
+        $(this).trigger('focus');
+    });
+
+    curForm.find('.form-input-new textarea').each(function() {
+        $(this).css({'height': this.scrollHeight, 'overflow-y': 'hidden'});
+    });
+
     curForm.find('input.maskPhone').mask('+7 (999) 999-99-99');
 
     curForm.find('.form-select select').chosen({disable_search: true, no_results_text: 'Нет результатов'});
@@ -758,6 +773,10 @@ function windowOpen(linkWindow, dataWindow) {
         if ($('.window').length > 0) {
             $('.window').append('<div class="window-container window-container-load"><div class="window-content">' + html + '<a href="#" class="window-close"></a></div></div>')
 
+            if ($('.window-container .window-callback').length > 0) {
+                $('.window').addClass('window-new');
+            }
+
             if ($('.window-container img').length > 0) {
                 $('.window-container img').each(function() {
                     $(this).attr('src', $(this).attr('src'));
@@ -779,17 +798,6 @@ function windowOpen(linkWindow, dataWindow) {
 
             $(window).resize(function() {
                 windowPosition();
-            });
-
-            $('.window-close').click(function(e) {
-                windowClose();
-                e.preventDefault();
-            });
-
-            $('body').on('keyup', function(e) {
-                if (e.keyCode == 27) {
-                    windowClose();
-                }
             });
 
             $('.window form').each(function() {

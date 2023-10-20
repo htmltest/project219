@@ -29,6 +29,9 @@
         <script type="text/javascript" src="js/slick/slick.min.js"></script>
         <script type="text/javascript" src="js/jscrollpane/jquery.mousewheel.js"></script>
         <script type="text/javascript" src="js/jscrollpane/jquery.jscrollpane.min.js"></script>
+        <script>
+            var pathTemplate = './';
+        </script>
         <script type="text/javascript" src="js/tools.js"></script>
         <script type="text/javascript" src="js/add.js"></script>
         <script type="text/javascript" src="js/new.js"></script>
@@ -51,16 +54,19 @@
 
                         <div class="header-title">проектно-инсталляционная компания.<br /> Поставка и монтаж аудио, видео, <br /> светового оборудования<br /></div>
 
-                        <div class="header-text">
-                            <div class="header-phone"><a href="tel:+7 985 129-63-18">+7 985 129-63-18</a></div>
-                            <div class="header-schedule">Пн–Вс, 10:00 &mdash; 19:00</div>
-                        </div>
-
                         <a href="#" class="mobile-menu-link"><svg><use xlink:href="images/sprite.svg#mobile-menu-link"></use></svg></a>
 
                         <div class="header-cart" id="topCartCont"><a href="#" class="header-cart-value"><span>0</span></a></div>
 
                         <a href="#" class="header-compare" style="display:none;"></a>
+
+                        <div class="header-contacts">
+                            <div class="header-contacts-header">
+                                <div class="header-contacts-callback"><a href="windows/callback.html" class="window-link"><svg><use xlink:href="images/sprite.svg#header-contacts-phone"></use></svg><span>Обратный звонок</span></a></div>
+                                <div class="header-contacts-schedule">Пн–Вс, 10:00 — 19:00</div>
+                            </div>
+                            <a href="tel:+7 985 129-63-18" class="header-contacts-phone"><svg><use xlink:href="images/sprite.svg#header-contacts-phone"></use></svg>+7 985 129-63-18</a>
+                        </div>
 
                         <div class="header-search">
                             <a href="#" class="header-search-link"></a>
@@ -83,15 +89,44 @@
                                     <li class="active">
                                         <a href="#">Звуковое оборудование</a>
                                         <ul>
-                                            <li><a href="#">Акустические системы</a><span>38</span></li>
-                                            <li><a href="#">Линейные массивы</a><span>26</span></li>
-                                            <li><a href="#">Аудио матрицы</a><span>26</span></li>
-                                            <li><a href="#">Источники сигнала</a><span>26</span></li>
-                                            <li><a href="#">Микшерные пульты</a><span>26</span></li>
-                                            <li><a href="#">Настенные панели управления</a><span>26</span></li>
-                                            <li><a href="#">Трансляционное оборудование</a><span>225</span></li>
-                                            <li><a href="#">Микрофоны и радиосистемы</a><span>26</span></li>
-                                            <li><a href="#">Акустические контроллеры</a><span>26</span></li>
+                                            <li>
+                                                <a href="#">Акустические системы</a><span>38</span>
+                                                <ul>
+                                                    <li><a href="#">Активная акустика</a><span>43</span></li>
+                                                    <li><a href="#">Активные сабвуферы</a><span>43</span></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Аудио матрицы</a><span>26</span>
+                                                <ul>
+                                                    <li><a href="#">Аудио матрицы Dante</a><span>2</span></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Микшерные пульты</a><span>26</span>
+                                                <ul>
+                                                    <li><a href="#">Аналоговые микшеры</a><span>2</span></li>
+                                                    <li><a href="#">Цифровые микшеры</a><span>2</span></li>
+                                                    <li><a href="#">Стейдж-Боксы</a><span>2</span></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Трансляционное оборудование</a><span>225</span>
+                                                <ul>
+                                                    <li><a href="#">Аттенюаторы</a><span>2</span></li>
+                                                    <li><a href="#">Корпусные громкоговорители</a><span>2</span></li>
+                                                    <li><a href="#">Настольные Микшеры- Усилители</a><span>2</span></li>
+                                                    <li><a href="#">Настольные Микшеры- Усилители 6 зон</a><span>2</span></li>
+                                                    <li><a href="#">Потолочные Громкоговорители</a><span>2</span></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Микрофоны и радиосистемы</a><span>26</span>
+                                                <ul>
+                                                    <li><a href="#">Головные радиомикрофоны</a><span>2</span></li>
+                                                    <li><a href="#">Ручные радиомикрофоны</a><span>2</span></li>
+                                                </ul>
+                                            </li>
                                             <li><a href="#">Усилители мощности</a><span>26</span></li>
                                         </ul>
                                     </li>
@@ -112,23 +147,6 @@
                                             <li><a href="#">Приборы эффектов</a><span>26</span></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Караоке-системы</a></li>
-                                    <li>
-                                        <a href="#">Кабели и разъемы</a>
-                                        <ul>
-                                            <li><a href="#">Кабели</a><span>38</span></li>
-                                            <li><a href="#">Разъемы</a><span>26</span></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Механооборудование сцены</a>
-                                        <ul>
-                                            <li><a href="#">Механизм занавеса</a><span>38</span></li>
-                                            <li><a href="#">Софиты</a><span>26</span></li>
-                                            <li><a href="#">Штанкеты</a><span>26</span></li>
-                                            <li><a href="#">Лебедки</a><span>26</span></li>
-                                        </ul>
-                                    </li>
                                     <li>
                                         <a href="#">Одежда сцены</a>
                                         <ul>
@@ -143,6 +161,47 @@
                                             <li><a href="#">Караоке</a><span>38</span></li>
                                             <li><a href="#">Рестораны</a><span>26</span></li>
                                             <li><a href="#">Клубы</a><span>26</span></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Механооборудование сцены</a>
+                                        <ul>
+                                            <li><a href="#">Механизм занавеса</a><span>38</span></li>
+                                            <li><a href="#">Софиты</a><span>26</span></li>
+                                            <li><a href="#">Штанкеты</a><span>26</span></li>
+                                            <li><a href="#">Лебедки</a><span>26</span></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Караоке-системы</a></li>
+                                    <li>
+                                        <a href="#">Кабели и разъемы</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Кабели</a><span>38</span>
+                                                <ul>
+                                                    <li><a href="#">DMX кабели</a><span>43</span></li>
+                                                    <li><a href="#">Акустические кабели</a><span>43</span></li>
+                                                    <li><a href="#">Микрофонные кабели</a><span>43</span></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Разъемы</a><span>26</span>
+                                                <ul>
+                                                    <li><a href="#">Кабельные разъемы XLR</a><span>43</span></li>
+                                                    <li><a href="#">Кабельные разъемы Jack</a><span>43</span></li>
+                                                    <li><a href="#">Кабельные разъемы RCA</a><span>43</span></li>
+                                                    <li><a href="#">Кабельные разъемы RJ45</a><span>43</span></li>
+                                                    <li><a href="#">Кабельные разъемы Speakon</a><span>43</span></li>
+                                                    <li><a href="#">Кабельные разъемы Powerkon</a><span>43</span></li>
+                                                    <li><a href="#">Панельные разъемы BNC</a><span>43</span></li>
+                                                    <li><a href="#">Панельные разъемы HDMI</a><span>43</span></li>
+                                                    <li><a href="#">Панельные разъемы Powerkon</a><span>43</span></li>
+                                                    <li><a href="#">Панельные разъемы RJ45</a><span>43</span></li>
+                                                    <li><a href="#">Панельные разъемы Speakon</a><span>43</span></li>
+                                                    <li><a href="#">Панельные разъемы USB</a><span>43</span></li>
+                                                    <li><a href="#">Панельные разъемы XLR тип D</a><span>43</span></li>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -174,28 +233,9 @@
                 <div class="container">
 
                     <div class="breadcrumbs"><a href="#" title="SL Media">SL Media</a><span></span><a href="#" title="Каталог">Каталог</a><span></span>Звуковое оборудование</div>
-                    <h1>Звуковое оборудование</h1>
 
-                    <!-- catalogue header -->
-                    <div class="catalogue-header">
-                        <a href="#" class="catalogue-filter-mobile-link"><svg><use xlink:href="images/sprite.svg#catalogue-filter-mobile-link"></use></svg>фильтр</a>
-                        <div class="catalogue-filter-mobile-title">Фильтры</div>
-                        <a href="#" class="catalogue-filter-mobile-close"><svg><use xlink:href="images/sprite.svg#mobile-menu-close"></use></svg></a>
-                        <div class="catalogue-header-sections">
-                            <form action="#" method="post">
-                                <label><input type="checkbox" name="section" value="1"><span>Sound<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
-                                <label><input type="checkbox" name="section" value="2"><span>Серия Sigma<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
-                                <label><input type="checkbox" name="section" value="3" checked><span>Серия Sigma<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
-                                <label><input type="checkbox" name="section" value="4"><span>Серия Sigma<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
-                                <label><input type="checkbox" name="section" value="5"><span>Серия Sigma<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
-                                <label><input type="checkbox" name="section" value="6" checked><span>Volta<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
-                                <label><input type="checkbox" name="section" value="7"><span>Серия Sigma<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
-                                <label><input type="checkbox" name="section" value="8"><span>Серия Sigma<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
-                                <label><input type="checkbox" name="section" value="9" checked><span>Серия Sigma<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
-                                <label><input type="checkbox" name="section" value="10"><span>Sound<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
-                                <label><input type="checkbox" name="section" value="11"><span>Серия Sigma<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
-                            </form>
-                        </div>
+                    <div class="catalogue-top">
+                        <h1>Трансляционное оборудование</h1>
                         <div class="catalogue-sort">
                             <div class="catalogue-sort-select">
                                 <div class="catalogue-sort-select-current"><span>Сначала дешевые</span><svg><use xlink:href="images/sprite.svg#catalogue-sort-select"></use></svg></div>
@@ -206,9 +246,7 @@
                                 </ul>
                             </div>
                         </div>
-
                     </div>
-                    <!-- catalogue header END -->
 
                     <!-- side -->
                     <div class="side">
@@ -217,6 +255,37 @@
                             <div class="bx_filter_section">
                                 <div class="bx_filter_title">Подбор параметров</div>
                                 <form name="arrFilter_form" action="#" method="get" class="smartfilter">
+                                    <div class="bx_filter_parameters_box active">
+                                        <span class="bx_filter_container_modef"></span>
+                                        <div class="bx_filter_parameters_box_title" onclick="smartFilter.hideFilterProps(this)">Категория</div>
+                                        <div class="bx_filter_block">
+                                            <div class="bx_filter_parameters_box_container">
+                                                <div class="filter-sections">
+                                                    <ul>
+                                                        <li class="active">
+                                                            <a href="#">Трансляционное оборудование</a><span>225</span>
+                                                            <ul>
+                                                                <li><a href="#">Аттенюаторы</a><span>2</span></li>
+                                                                <li class="active"><a href="#">Корпусные громкоговорители</a><span>2</span></li>
+                                                                <li><a href="#">Настольные Микшеры- Усилители</a><span>2</span></li>
+                                                                <li><a href="#">Настольные Микшеры- Усилители 6 зон</a><span>2</span></li>
+                                                                <li><a href="#">Потолочные Громкоговорители</a><span>2</span></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Микрофоны и радиосистемы</a><span>26</span>
+                                                            <ul>
+                                                                <li><a href="#">Головные радиомикрофоны</a><span>2</span></li>
+                                                                <li><a href="#">Ручные радиомикрофоны</a><span>2</span></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#">Усилители мощности</a><span>26</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="clb"></div>
+                                        </div>
+                                    </div>
                                     <div class="bx_filter_parameters_box">
                                         <span class="bx_filter_container_modef"></span>
                                         <div class="bx_filter_parameters_box_title" onclick="smartFilter.hideFilterProps(this)">Цена</div>
@@ -273,6 +342,142 @@
                                         </div>
                                     </div>
                                     <div class="bx_filter_parameters_box ">
+                                        <span class="bx_filter_container_modef"></span>
+                                        <div class="bx_filter_parameters_box_title" onclick="smartFilter.hideFilterProps(this)">Бренд</div>
+                                        <div class="bx_filter_block">
+                                            <div class="bx_filter_parameters_box_container">
+                                                <label data-role="label_arrFilter_80_2797915981" class="bx_filter_param_label" for="arrFilter_80_2797915981">
+                                                    <span class="bx_filter_input_checkbox">
+                                                        <input type="checkbox" value="Y" name="arrFilter_80_2797915981" id="arrFilter_80_2797915981" onclick="smartFilter.click(this)" wfd-id="id6">
+                                                        <span class="bx_filter_param_text" title="Art system">Art system <span data-role="count_arrFilter_80_2797915981">1</span></span>
+                                                    </span>
+                                                </label>
+                                                <label data-role="label_arrFilter_80_308411424" class="bx_filter_param_label" for="arrFilter_80_308411424">
+                                                    <span class="bx_filter_input_checkbox">
+                                                        <input type="checkbox" value="Y" name="arrFilter_80_308411424" id="arrFilter_80_308411424" onclick="smartFilter.click(this)" wfd-id="id7">
+                                                        <span class="bx_filter_param_text" title="Behringer">Behringer <span data-role="count_arrFilter_80_308411424">66</span></span>
+                                                    </span>
+                                                </label>
+                                                <label data-role="label_arrFilter_80_3350064947" class="bx_filter_param_label" for="arrFilter_80_3350064947">
+                                                    <span class="bx_filter_input_checkbox">
+                                                        <input type="checkbox" value="Y" name="arrFilter_80_3350064947" id="arrFilter_80_3350064947" onclick="smartFilter.click(this)" wfd-id="id8">
+                                                        <span class="bx_filter_param_text" title="DDM SOUND">DDM SOUND <span data-role="count_arrFilter_80_3350064947">17</span></span>
+                                                    </span>
+                                                </label>
+                                                <label data-role="label_arrFilter_80_1281969641" class="bx_filter_param_label" for="arrFilter_80_1281969641">
+                                                    <span class="bx_filter_input_checkbox">
+                                                        <input type="checkbox" value="Y" name="arrFilter_80_1281969641" id="arrFilter_80_1281969641" onclick="smartFilter.click(this)" wfd-id="id9">
+                                                        <span class="bx_filter_param_text" title="ECO">ECO <span data-role="count_arrFilter_80_1281969641">5</span></span>
+                                                    </span>
+                                                </label>
+                                                <label data-role="label_arrFilter_80_1175529043" class="bx_filter_param_label" for="arrFilter_80_1175529043">
+                                                    <span class="bx_filter_input_checkbox">
+                                                        <input type="checkbox" value="Y" name="arrFilter_80_1175529043" id="arrFilter_80_1175529043" onclick="smartFilter.click(this)" wfd-id="id10">
+                                                        <span class="bx_filter_param_text" title="L-Audio">L-Audio <span data-role="count_arrFilter_80_1175529043">9</span></span>
+                                                    </span>
+                                                </label>
+                                                <label data-role="label_arrFilter_80_823531205" class="bx_filter_param_label" for="arrFilter_80_823531205">
+                                                    <span class="bx_filter_input_checkbox focus">
+                                                        <input type="checkbox" value="Y" name="arrFilter_80_823531205" id="arrFilter_80_823531205" onclick="smartFilter.click(this)" wfd-id="id11" checked>
+                                                        <span class="bx_filter_param_text" title="Micnet">Micnet <span data-role="count_arrFilter_80_823531205">5</span></span>
+                                                    </span>
+                                                </label>
+                                                <label data-role="label_arrFilter_80_1815558320" class="bx_filter_param_label" for="arrFilter_80_1815558320">
+                                                    <span class="bx_filter_input_checkbox">
+                                                        <input type="checkbox" value="Y" name="arrFilter_80_1815558320" id="arrFilter_80_1815558320" onclick="smartFilter.click(this)" wfd-id="id12" checked>
+                                                        <span class="bx_filter_param_text" title="MIDAS">MIDAS <span data-role="count_arrFilter_80_1815558320">8</span></span>
+                                                    </span>
+                                                </label>
+                                                <label data-role="label_arrFilter_80_4226146616" class="bx_filter_param_label" for="arrFilter_80_4226146616">
+                                                    <span class="bx_filter_input_checkbox">
+                                                        <input type="checkbox" value="Y" name="arrFilter_80_4226146616" id="arrFilter_80_4226146616" onclick="smartFilter.click(this)" wfd-id="id13">
+                                                        <span class="bx_filter_param_text" title="S-Track">S-Track <span data-role="count_arrFilter_80_4226146616">4</span></span>
+                                                    </span>
+                                                </label>
+                                                <label data-role="label_arrFilter_80_2768955612" class="bx_filter_param_label" for="arrFilter_80_2768955612">
+                                                    <span class="bx_filter_input_checkbox">
+                                                        <input type="checkbox" value="Y" name="arrFilter_80_2768955612" id="arrFilter_80_2768955612" onclick="smartFilter.click(this)" wfd-id="id14">
+                                                        <span class="bx_filter_param_text" title="Turbosound">Turbosound <span data-role="count_arrFilter_80_2768955612">1</span></span>
+                                                    </span>
+                                                </label>
+                                                <label data-role="label_arrFilter_80_2724670661" class="bx_filter_param_label" for="arrFilter_80_2724670661">
+                                                    <span class="bx_filter_input_checkbox">
+                                                        <input type="checkbox" value="Y" name="arrFilter_80_2724670661" id="arrFilter_80_2724670661" onclick="smartFilter.click(this)" wfd-id="id15">
+                                                        <span class="bx_filter_param_text" title="Volta">Volta <span data-role="count_arrFilter_80_2724670661">53</span></span>
+                                                    </span>
+                                                </label>
+                                                <label data-role="label_arrFilter_80_3375643543" class="bx_filter_param_label" for="arrFilter_80_3375643543">
+                                                    <span class="bx_filter_input_checkbox">
+                                                        <input type="checkbox" value="Y" name="arrFilter_80_3375643543" id="arrFilter_80_3375643543" onclick="smartFilter.click(this)" wfd-id="id16">
+                                                        <span class="bx_filter_param_text" title="Wingreat">Wingreat <span data-role="count_arrFilter_80_3375643543">7</span></span>
+                                                    </span>
+                                                </label>
+                                                <label data-role="label_arrFilter_80_1682120364" class="bx_filter_param_label" for="arrFilter_80_1682120364">
+                                                    <span class="bx_filter_input_checkbox">
+                                                        <input type="checkbox" value="Y" name="arrFilter_80_1682120364" id="arrFilter_80_1682120364" onclick="smartFilter.click(this)" wfd-id="id17">
+                                                        <span class="bx_filter_param_text" title="ВЕКТОР">ВЕКТОР <span data-role="count_arrFilter_80_1682120364">33</span></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="clb"></div>
+                                        </div>
+                                    </div>
+                                    <div class="bx_filter_parameters_box active">
+                                        <span class="bx_filter_container_modef"></span>
+                                        <div class="bx_filter_parameters_box_title" onclick="smartFilter.hideFilterProps(this)">Цена</div>
+                                        <div class="bx_filter_block">
+                                            <div class="bx_filter_parameters_box_container">
+                                                <div class="bx_filter_parameters_box_container_block">
+                                                    <div class="bx_filter_input_container">
+                                                        <input
+                                                            class="min-price"
+                                                            type="text"
+                                                            name="arrFilter_63_MIN"
+                                                            id="arrFilter_63_MIN"
+                                                            value=""
+                                                            size="5"
+                                                            onkeyup="smartFilter.keyup(this)"
+                                                            style="position:absolute; left:-9999px; top:-9999px"
+                                                        />
+                                                        <input class="min-price" type="text" value="0" size="5" onkeyup="updatePrev(this)" />
+                                                    </div>
+                                                </div>
+                                                <div class="bx_filter_parameters_box_container_block">
+                                                    <div class="bx_filter_input_container">
+                                                        <input
+                                                            class="max-price"
+                                                            type="text"
+                                                            name="arrFilter_63_MAX"
+                                                            id="arrFilter_63_MAX"
+                                                            value=""
+                                                            size="5"
+                                                            onkeyup="smartFilter.keyup(this)"
+                                                            style="position:absolute; left:-9999px; top:-9999px"
+                                                        />
+                                                        <input class="max-price" type="text" value="12000" size="5" onkeyup="updatePrev(this)" />
+                                                    </div>
+                                                </div>
+                                                <div style="clear: both;"></div>
+
+                                                <div class="bx_ui_slider_track" id="drag_track_63">
+                                                    <div class="bx_ui_slider_part p1"><span>239</span></div>
+                                                    <div class="bx_ui_slider_part p2"><span>132242</span></div>
+                                                    <div class="bx_ui_slider_part p3"><span>264244</span></div>
+                                                    <div class="bx_ui_slider_part p4"><span>396247</span></div>
+                                                    <div class="bx_ui_slider_part p5"><span>528249</span></div>
+                                                    <div class="bx_ui_slider_pricebar_VD" style="left: 15.2381%; right: 30%;" id="colorUnavailableActive_63"></div>
+                                                    <div class="bx_ui_slider_pricebar_VN" style="left: 0%; right: 0%;" id="colorAvailableInactive_63"></div>
+                                                    <div class="bx_ui_slider_pricebar_V"  style="left: 15.2381%; right: 30%;" id="colorAvailableActive_63"></div>
+                                                    <div class="bx_ui_slider_range" 	id="drag_tracker_63"  style="left: 0;right: 0;">
+                                                        <a class="bx_ui_slider_handle left"  style="left: 15.2381%;" href="javascript:void(0)" id="left_slider_63"></a>
+                                                        <a class="bx_ui_slider_handle right" style="right: 30%;" href="javascript:void(0)" id="right_slider_63"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clb"></div>
+                                        </div>
+                                    </div>
+                                    <div class="bx_filter_parameters_box active">
                                         <span class="bx_filter_container_modef">
                                             <div class="bx_filter_popup_result left" id="modef" style="display: inline-block;">
                                                 Выбрано: <span id="modef_num">13</span>
@@ -383,6 +588,29 @@
                     <!-- content -->
                     <div class="content">
                         <div class="content-wrap">
+
+                            <!-- catalogue header -->
+                            <div class="catalogue-header">
+                                <a href="#" class="catalogue-filter-mobile-link"><svg><use xlink:href="images/sprite.svg#catalogue-filter-mobile-link"></use></svg>фильтр</a>
+                                <div class="catalogue-filter-mobile-title">Фильтры</div>
+                                <a href="#" class="catalogue-filter-mobile-close"><svg><use xlink:href="images/sprite.svg#mobile-menu-close"></use></svg></a>
+                                <div class="catalogue-header-sections">
+                                    <form action="#" method="post">
+                                        <label><input type="checkbox" name="section" value="1"><span>Sound<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
+                                        <label><input type="checkbox" name="section" value="2"><span>Серия Sigma<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
+                                        <label><input type="checkbox" name="section" value="3" checked><span>Серия Sigma<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
+                                        <label><input type="checkbox" name="section" value="4"><span>Серия Sigma<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
+                                        <label><input type="checkbox" name="section" value="5"><span>Серия Sigma<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
+                                        <label><input type="checkbox" name="section" value="6" checked><span>Volta<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
+                                        <label><input type="checkbox" name="section" value="7"><span>Серия Sigma<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
+                                        <label><input type="checkbox" name="section" value="8"><span>Серия Sigma<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
+                                        <label><input type="checkbox" name="section" value="9" checked><span>Серия Sigma<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
+                                        <label><input type="checkbox" name="section" value="10"><span>Sound<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
+                                        <label><input type="checkbox" name="section" value="11"><span>Серия Sigma<svg><use xlink:href="images/sprite.svg#catalogue-header-section"></use></svg></span></label>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- catalogue header END -->
 
                             <!-- catalogue list -->
                             <div class="catalogue-list">
