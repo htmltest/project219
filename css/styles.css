@@ -657,7 +657,7 @@ input:checked+.bx_filter_param_label.dib .bx_filter_btn_color_icon:before {borde
 .filter-sections > ul > li::before {display:none}
 .filter-sections > ul > li > a {display:block; color:#0E6399; text-decoration:none; padding:0 48px 0 0}
 .filter-sections > ul > li > a:hover {color:#000000}
-.filter-sections > ul > li.active > a {padding:4px 48px 4px 9px; background:#F7F7F7; color:#000000}
+.filter-sections > ul > li.active > a {padding:4px 48px 4px 9px; background:#DFF3FF; color:#000000}
 .filter-sections > ul > li > span {position:absolute; right:6px; top:0; font-weight:300; font-size:13px; line-height:20px; color:#898989}
 .filter-sections > ul > li.active > span {top:4px}
 .filter-sections > ul > li > ul {margin:0; padding:0; list-style:none; font-weight:300; font-size:14px; line-height:18px}
@@ -665,7 +665,7 @@ input:checked+.bx_filter_param_label.dib .bx_filter_btn_color_icon:before {borde
 .filter-sections > ul > li > ul > li::before {display:none}
 .filter-sections > ul > li > ul > li > a {display:block; color:#000000; text-decoration:none; padding:0 48px 0 9px}
 .filter-sections > ul > li > ul > li > a:hover {color:#0E6399}
-.filter-sections > ul > li > ul > li.active > a {padding:4px 48px 4px 9px; background:#F7F7F7; color:#000000}
+.filter-sections > ul > li > ul > li.active > a {padding:4px 48px 4px 9px; background:#DFF3FF; color:#000000}
 .filter-sections > ul > li > ul > li> span {position:absolute; right:6px; top:0; font-weight:300; font-size:13px; line-height:18px; color:#898989}
 .filter-sections > ul > li > ul > li.active > span {top:4px}
 
